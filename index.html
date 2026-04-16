@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moniqa — Digital förvaltning</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"DM Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            moniqa: {
+              pink: '#ffcef5',
+              'pink-text': '#6b0050',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    /*
+     * Bakgrundsgradienten är för komplex för enbart Tailwind-klasser.
+     * Dessa tre CSS-regler är det enda som behöver ligga utanför Tailwind.
+     */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 80% 70% at 80% 60%, #e8186a 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 90% 100%, #c4007a 0%, transparent 55%),
+        radial-gradient(ellipse 70% 60% at 10% 90%, #4a00c8 0%, transparent 60%),
+        linear-gradient(135deg, #3a4fd4 0%, #5b3bbf 30%, #9b1a8a 60%, #d42060 85%, #e8304a 100%);
+    }
+    .floor {
+      background: linear-gradient(180deg, transparent 0%, rgba(60,10,100,0.55) 60%, rgba(30,5,80,0.8) 100%);
+    }
+    .floor-sheen {
+      background: radial-gradient(ellipse 70% 40% at 50% 100%, rgba(220,80,180,0.25) 0%, transparent 100%);
+    }
+    .atmosphere {
+      background:
+        radial-gradient(ellipse 50% 40% at 20% 20%, rgba(100,130,255,0.4) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 50% at 75% 15%, rgba(100,180,255,0.2) 0%, transparent 55%);
+    }
+  </style>
+</head>
+<body class="font-body">
+
+  <section class="hero-bg relative overflow-hidden min-h-screen">
+
+    <!-- Atmosfär och golv-effekter -->
+    <div class="atmosphere absolute inset-0 pointer-events-none"></div>
+    <div class="floor absolute bottom-0 left-0 right-0 h-40 pointer-events-none"></div>
+    <div class="floor-sheen absolute bottom-0 left-[10%] right-[10%] h-20 pointer-events-none"></div>
+
+    <!-- Navbar -->
+    <nav class="relative z-10 flex items-center justify-between px-10 py-6">
+      <div class="font-display text-[22px] font-bold text-white tracking-tight">
+        Moniqa<span class="text-moniqa-pink">.</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <button class="font-body text-[13px] text-white bg-white/10 border border-white/30 px-5 py-2 rounded-full cursor-pointer">
+          Ta kontakt
+        </button>
+        <button class="font-body text-[13px] font-medium text-moniqa-pink-text bg-moniqa-pink border-none px-5 py-2 rounded-full cursor-pointer">
+          Mer om Moniqa
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero-innehåll -->
+    <div class="relative z-10 px-10 pt-11 pb-24 max-w-2xl">
+
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-2 mb-6">
+        <span class="block w-5 h-px bg-moniqa-pink"></span>
+        <span class="text-[11px] font-medium tracking-[1.5px] uppercase text-moniqa-pink">Digital förvaltning</span>
+      </div>
+
+      <!-- Rubrik -->
+      <h1 class="font-display text-[62px] font-bold leading-[1.05] text-white tracking-tight mb-3"
+          style="text-shadow: 0 2px 30px rgba(0,0,0,0.2)">
+        Moniqa.
+      </h1>
+
+      <!-- Slogan -->
+      <p class="font-display text-[21px] italic text-moniqa-pink leading-[1.45] mb-7">
+        Din digitala närvaro —<br>äntligen i rätta händer.
+      </p>
+
+      <!-- Brödtext -->
+      <p class="text-[15px] font-normal text-white leading-[1.75] max-w-lg mb-5">
+        Många företag äger sin digitala närvaro på papper. Moniqa ser till att någon faktiskt tar hand om den — snyggt, rätt och tillgängligt.
+      </p>
+
+      <!-- Kompetens-badges -->
+      <div class="flex flex-wrap gap-2 mb-9">
+        <span class="text-[11px] font-medium tracking-wide px-3 py-1.5 rounded-full bg-moniqa-pink text-moniqa-pink-text">
+          Tillgänglighet & DOS-lagen
+        </span>
+        <span class="text-[11px] font-medium tracking-wide px-3 py-1.5 rounded-full bg-white/[0.18] text-white border border-white/30">
+          SEO & Analytics
+        </span>
+        <span class="text-[11px] font-medium tracking-wide px-3 py-1.5 rounded-full bg-white/[0.18] text-white border border-white/30">
+          Webb & CMS
+        </span>
+        <span class="text-[11px] font-medium tracking-wide px-3 py-1.5 rounded-full bg-white/[0.18] text-white border border-white/30">
+          GDPR
+        </span>
+        <span class="text-[11px] font-medium tracking-wide px-3 py-1.5 rounded-full bg-white/[0.18] text-white border border-white/30">
+          Google Tag Manager
+        </span>
+      </div>
+
+      <!-- CTA-knappar -->
+      <div class="flex items-center gap-4">
+        <button class="font-body text-[14px] font-medium text-moniqa-pink-text bg-moniqa-pink border-none px-8 py-3.5 rounded-full cursor-pointer">
+          Ta kontakt
+        </button>
+        <button class="font-body text-[14px] text-white bg-white/10 border border-white/30 px-7 py-3.5 rounded-full cursor-pointer">
+          Mer om Moniqa
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
