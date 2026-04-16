@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer utilities {
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 80% 70% at 80% 60%, #e8186a 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 90% 100%, #c4007a 0%, transparent 55%),
+      radial-gradient(ellipse 70% 60% at 10% 90%, #4a00c8 0%, transparent 60%),
+      linear-gradient(135deg, #3a4fd4 0%, #5b3bbf 30%, #9b1a8a 60%, #d42060 85%, #e8304a 100%);
+  }
+  .floor {
+    background: linear-gradient(180deg, transparent 0%, rgba(60,10,100,0.55) 60%, rgba(30,5,80,0.8) 100%);
+  }
+  .floor-sheen {
+    background: radial-gradient(ellipse 70% 40% at 50% 100%, rgba(220,80,180,0.25) 0%, transparent 100%);
+  }
+  .atmosphere {
+    background:
+      radial-gradient(ellipse 50% 40% at 20% 20%, rgba(100,130,255,0.4) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 50% at 75% 15%, rgba(100,180,255,0.2) 0%, transparent 55%);
+  }
+}

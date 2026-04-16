@@ -1,0 +1,23 @@
+{
+  "name": "moniqa.se",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moniqase/moniqa.se.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moniqase/moniqa.se/issues"
+  },
+  "homepage": "https://github.com/moniqase/moniqa.se#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
